@@ -1,0 +1,6 @@
+{
+  "name": "CajuTech",
+  "description": "Plataforma educacional para o ensino do cultivo do caju e aproveitamento de seus derivados no Piauí.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

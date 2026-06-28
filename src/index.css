@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Lora", Georgia, serif;
+  --font-display: "Lora", Georgia, serif;
+  
+  --color-art-bg: #FCFAF7;
+  --color-art-green: #143D21;
+  --color-art-orange: #F97316;
+  --color-art-muted: #5C6E5C;
+  --color-art-dark: #1A2E1A;
+  --color-art-cream: #FDF5E6;
+  --color-art-cream-border: #F2E8D5;
+  --color-art-cream-text: #A67C00;
+  --color-art-gray-bg: #F1F5F2;
+  --color-art-gray-border: #D9E2DA;
+  --color-art-border: #E8E4D9;
+  --color-art-success: #22C55E;
+}
+
+/* Dark Mode Overrides */
+.dark {
+  --color-art-bg: #0A120B;
+  --color-art-green: #1E6B34;
+  --color-art-orange: #FB923C;
+  --color-art-muted: #8AA38E;
+  --color-art-dark: #ECFDF5;
+  --color-art-cream: #221E14;
+  --color-art-cream-border: #4D3D22;
+  --color-art-cream-text: #FDE047;
+  --color-art-gray-bg: #142016;
+  --color-art-gray-border: #223826;
+  --color-art-border: #2B4231;
+  --color-art-success: #4ADE80;
+}
+
+/* Custom CSS animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom styles for React Markdown in lessons */
+.prose h1 {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--color-art-dark);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-art-border);
+  padding-bottom: 0.25rem;
+}
+
+.prose h2 {
+  font-family: "Lora", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--color-art-green);
+  margin-top: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.prose p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: var(--color-art-dark);
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-art-dark);
+}
+
+.prose li {
+  margin-bottom: 0.25rem;
+}
+
+.prose strong {
+  font-weight: 700;
+  color: var(--color-art-green);
+}
+
+/* Styling for Native Print API */
+@media print {
+  /* Hide UI elements that are not part of the core student report */
+  nav,
+  #btn-theme-toggle,
+  #desktop-tabs,
+  #mobile-tabs,
+  #ai-chatbot-container,
+  #card-motivation,
+  #dashboard-progress-analytics,
+  #teacher-dashboard > div:first-child,
+  form,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Reset layout constraints so the report prints cleanly */
+  body,
+  html {
+    background: white !important;
+    color: black !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Make the student table full-screen print size */
+  .overflow-x-auto {
+    overflow: visible !important;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    font-size: 11px !important;
+  }
+
+  th, td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 8px !important;
+    color: #0f172a !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+    font-weight: bold !important;
+  }
+}
