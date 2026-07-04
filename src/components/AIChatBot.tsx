@@ -23,7 +23,7 @@ export function AIChatBot() {
     {
       id: "initial-msg",
       sender: "ai",
-      text: "Olá! Sou o **CajuAjudante**, seu assistente virtual especializado em cajucultura. \n\nEstou aqui para ajudar com dúvidas sobre plantio, controle de pragas, adubação, colheita e a produção de deliciosos derivados do caju, como a cajuína, doces e castanhas. \n\nComo posso ajudar você hoje?",
+      text: "Olá! Sou o **Cajubot**, seu assistente virtual especializado em cajucultura. \n\nEstou aqui para ajudar com dúvidas sobre plantio, controle de pragas, adubação, colheita e a produção de deliciosos derivados do caju, como a cajuína, doces e castanhas. \n\nComo posso ajudar você hoje?",
       timestamp: new Date()
     }
   ]);
@@ -100,7 +100,7 @@ export function AIChatBot() {
 
       setMessages(prev => [...prev, aiMsg]);
     } catch (err: any) {
-      console.error("Erro no chat do CajuAjudante:", err);
+      console.error("Erro no chat do Cajubot:", err);
       setError("Ops! Ocorreu um erro ao carregar a resposta. Por favor, tente novamente.");
     } finally {
       setIsLoading(false);
@@ -135,7 +135,7 @@ export function AIChatBot() {
         className="flex h-14 w-14 items-center justify-center rounded-full bg-art-green text-white shadow-lg hover:bg-art-green/95 transition-colors focus:outline-none focus:ring-2 focus:ring-art-orange focus:ring-offset-2 relative cursor-pointer"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        title="Conversar com CajuAjudante"
+        title="Conversar com Cajubot"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
@@ -185,7 +185,7 @@ export function AIChatBot() {
                   <Sparkles className="h-5 w-5 fill-current" />
                 </div>
                 <div>
-                  <h3 className="font-serif font-bold text-base leading-tight">CajuAjudante AI</h3>
+                  <h3 className="font-serif font-bold text-base leading-tight">Cajubot</h3>
                   <div className="flex items-center space-x-1.5">
                     <span className="h-2 w-2 rounded-full bg-art-success animate-pulse" />
                     <span className="text-xs text-white/80 font-medium">Especialista em Cajucultura</span>
@@ -283,7 +283,7 @@ export function AIChatBot() {
                   <div className="bg-white dark:bg-art-gray-bg/80 border border-art-gray-border text-art-dark rounded-2xl rounded-bl-none p-3.5 shadow-sm max-w-[85%] flex items-center space-x-2">
                     <span className="text-xs text-art-muted font-medium flex items-center space-x-1.5">
                       <Sparkles className="h-3.5 w-3.5 animate-spin text-art-orange" />
-                      <span>CajuAjudante está elaborando a resposta...</span>
+                      <span>Cajubot está elaborando a resposta...</span>
                     </span>
                     <span className="flex space-x-1 items-center">
                       <span className="block h-1.5 w-1.5 rounded-full bg-art-orange animate-bounce" style={{ animationDelay: "0ms" }} />

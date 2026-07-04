@@ -35,7 +35,7 @@ export default function WeatherWidget({ regiaoAtual, onRegiaoChange }: { regiaoA
     setLoading(true);
     setError(false);
     try {
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,precipitation,weather_code&daily=temperature_2m_max,temperature_2m_min,precipitation_sum&timezone=America%2FFortaleza&forecast_days=1`;
+      const url = `/api/weather?lat=${lat}&lon=${lon}`;
       const res = await fetch(url);
       const data = await res.json();
       
