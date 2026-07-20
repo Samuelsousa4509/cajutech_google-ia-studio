@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { LogOut, Trophy, MapPin, Award, Menu, X, Sun, Moon } from 'lucide-react';
+import cajutechLogo from '../assets/images/cajutech_logo_1784564028674.jpg';
 
 export default function Navbar({ onTabChange, activeTab }: { onTabChange: (tab: string) => void, activeTab: string }) {
   const { user, logoutUser, changeRegiao } = useAuth();
@@ -36,8 +37,13 @@ export default function Navbar({ onTabChange, activeTab }: { onTabChange: (tab: 
     <nav className="bg-white dark:bg-art-gray-bg border-b border-art-border shadow-sm sticky top-0 z-50 px-4 py-3 md:px-8 flex justify-between items-center transition-colors duration-300" id="main-navbar">
       {/* Brand Logo */}
       <div className="flex items-center gap-3">
-        <div className="w-9 h-9 bg-art-orange rounded-full flex items-center justify-center">
-          <span className="text-base font-serif font-bold text-white">C</span>
+        <div className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-black border border-art-border">
+          <img 
+            src={cajutechLogo} 
+            alt="CajuTech Logo" 
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
         </div>
         <div>
           <h1 className="font-serif text-lg tracking-tight leading-none text-art-dark">
@@ -106,7 +112,9 @@ export default function Navbar({ onTabChange, activeTab }: { onTabChange: (tab: 
         {/* Profile Card & LogOut */}
         <div className="flex items-center gap-2 border-l border-art-border pl-4">
           <div className="text-right hidden md:block">
-            <strong className="text-xs text-art-dark block font-bold leading-tight">{user.nome}</strong>
+            <strong className="text-xs text-art-dark block font-bold leading-tight">
+              {user.perfil === 'aluno' ? 'Estudante' : user.perfil === 'professor' ? 'Professor(a)' : 'Agricultor(a)'}
+            </strong>
             <span className="text-[10px] text-art-muted font-medium">
               {getPerfilEmoji(user.perfil)} {getPerfilLabel(user.perfil)}
             </span>

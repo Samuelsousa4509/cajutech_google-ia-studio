@@ -513,7 +513,7 @@ export default function AgricultorDashboard() {
             Painel do Produtor Rural 🌾
           </span>
           <h1 className="font-serif font-medium text-3xl md:text-5xl leading-tight tracking-tighter">
-            Hora de cuidar da <br className="hidden md:inline"/><span className="italic underline decoration-2 underline-offset-8">floração</span>, {user.nome}!
+            Agricultor, é hora de <br className="hidden md:inline"/>cuidar do seu <span className="italic underline decoration-2 underline-offset-8">cajueiro</span>!
           </h1>
           <p className="text-sm opacity-90 max-w-md font-light italic">
             Gerencie seu pomar de cajueiro, consulte a previsão do tempo regional e faça análise instantânea de pragas por foto com inteligência artificial.

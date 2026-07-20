@@ -192,7 +192,7 @@ export default function ProfessorDashboard() {
             Painel do Professor Educador 👨‍🏫
           </span>
           <h1 className="font-serif font-medium text-3xl md:text-5xl leading-tight tracking-tighter">
-            Painel do <span className="italic underline decoration-2 underline-offset-8">Educador</span>, {user.nome}!
+            Bem-vindo ao Painel do <span className="italic underline decoration-2 underline-offset-8">Educador</span>!
           </h1>
           <p className="text-sm opacity-90 max-w-md font-light italic">
             Monitore o rendimento individual dos alunos, exporte relatórios de desempenho e crie quizzes pedagógicos para suas turmas.

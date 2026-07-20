@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { BookOpen, Sparkles, Sprout, ShieldCheck, ChevronRight, GraduationCap, CheckCircle, Mail, Lock, User } from 'lucide-react';
 import { PerfilUsuario } from '../types';
+import cajutechLogo from '../assets/images/cajutech_logo_1784564028674.jpg';
 
 export default function LandingPage({ onNavigate }: { onNavigate: (page: string) => void }) {
   const { login, signup, loginDemo, error } = useAuth();
@@ -104,8 +105,13 @@ export default function LandingPage({ onNavigate }: { onNavigate: (page: string)
         <div className="absolute -left-12 -top-12 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
 
         <div className="flex items-center gap-3 relative z-10">
-          <div className="w-10 h-10 bg-art-orange rounded-full flex items-center justify-center">
-            <span className="text-xl font-serif font-bold text-white">C</span>
+          <div className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-black border border-white/20">
+            <img 
+              src={cajutechLogo} 
+              alt="CajuTech Logo" 
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
+            />
           </div>
           <div>
             <h1 className="font-serif text-2xl tracking-tight leading-none text-white">

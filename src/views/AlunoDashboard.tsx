@@ -143,7 +143,7 @@ export default function AlunoDashboard() {
               Escola do Caju Piauí 🎓
             </span>
             <h1 className="font-serif font-medium text-3xl md:text-5xl leading-tight tracking-tighter">
-              Escola do <span className="italic underline decoration-2 underline-offset-8">Caju</span>, {user.nome}!
+              Bem-vindo à Escola do <span className="italic underline decoration-2 underline-offset-8">Caju</span> Estudante!
             </h1>
             <p className="text-sm opacity-90 max-w-md font-light italic">
               Aprenda a plantar, processar e vender derivados de caju. Conclua as lições práticas e faça quizzes para testar seus conhecimentos e faturar insígnias!
